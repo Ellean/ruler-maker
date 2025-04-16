@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruler Maker</title>
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+    <div id="mm"></div>
+
+    <div id="SVG-renderer"></div>
+
+    <div id="SVG-renderer-operations">
+        <button id="reset-SVG" class="black">Reset</button>
+        <button id="export-SVG">Export</button>
+        <button id="start-SVG">Start</button>
+    </div>
+
+    <div id="title">
+        <div>R</div>
+        <div>U</div>
+        <div>L</div>
+        <div>E</div>
+        <div>R</div>
+        <br />
+        <div>M</div>
+        <div>A</div>
+        <div>K</div>
+        <div>E</div>
+        <div>R</div>
+    </div>
+
+    <div id="form-container">
+        <form id="ruler-form">
+            <label for="width">Ruler Width (mm):</label>
+            <input type="number" id="width" name="width" placeholder="20"><br>
+
+            <label for="length">Ruler Length (mm):</label>
+            <input type="number" id="length" name="length" placeholder="100"><br>
+
+            <label for="mmTickLength">mm Tick Length (mm):</label>
+            <div class="flex">
+                <p id="mmTickLengthMin"></p>
+                <p id="mmTickLengthNow"></p>
+                <p id="mmTickLengthMax"></p>
+            </div>
+            <input type="range" id="mmTickLength" name="mmTickLength"><br>
+
+            <label for="mmTickColor">mm Tick Color:</label>
+            <input type="color" id="mmTickColor" name="mmTickColor" value="#000000"><br>
+
+            <label for="cmTickLength">cm Tick Length (mm):</label>
+            <div class="flex">
+                <p id="cmTickLengthMin"></p>
+                <p id="cmTickLengthNow"></p>
+                <p id="cmTickLengthMax"></p>
+            </div>
+            <input type="range" id="cmTickLength" name="cmTickLength"><br>
+
+            <label for="cmTickColor">cm Tick Color:</label>
+            <input type="color" id="cmTickColor" name="cmTickColor" value="#000000"><br>
+
+            <label for="cmLabelOffset">cm Label Offset (mm):</label>
+            <div class="flex">
+                <p id="cmLabelOffsetMin"></p>
+                <p id="cmLabelOffsetNow"></p>
+                <p id="cmLabelOffsetMax"></p>
+            </div>
+            <input type="range" id="cmLabelOffset" name="cmLabelOffset"><br>
+
+            <label for="fontColor">Font Color:</label>
+            <input type="color" id="fontColor" name="fontColor" value="#000000"><br>
+
+            <label for="startMargin">Start Margin (mm):</label>
+            <input type="number" id="startMargin" name="startMargin" placeholder="10"><br>
+
+            <label for="endMargin">End Margin (mm):</label>
+            <input type="number" id="endMargin" name="endMargin" placeholder="10"><br>
+
+            <label for="startText">Start Text:</label>
+            <input type="text" id="startText" name="startText" placeholder="Start"><br>
+
+            <label for="endText">End Text:</label>
+            <input type="text" id="endText" name="endText" placeholder="End"><br>
+
+            <label for="fontSize">Font Size (mm):</label>
+            <div class="flex">
+                <p id="fontSizeMin"></p>
+                <p id="fontSizeNow"></p>
+                <p id="fontSizeMax"></p>
+            </div>
+            <input type="range" id="fontSize" name="fontSize" value="5"><br>
+        </form>
+    </div>
+
+    <script src="./js/utils.js"></script>
+
+    <script src="./js/Ruler.class.js"></script>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
