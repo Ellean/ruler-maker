@@ -131,9 +131,9 @@ class Ruler {
       setValueOfKey: sVoK,
     } = this;
 
-    sVoK(key, value)
+    sVoK(key, value !== "" ? value : this[key])
 
-    if (gNKs().includes(key)) {
+    if (gNKs().includes(key) && value !== "") {
       sVoK(key, parseFloat(value));
       uRs();
     }
