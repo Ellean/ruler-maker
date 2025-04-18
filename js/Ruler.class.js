@@ -176,9 +176,6 @@ class Ruler {
       emitData: eD,
     } = this;
 
-    // 调用范围更新监听器，传入字体大小、刻度长度、标签偏移等参数
-    // rUL(fS, fSR[0], fSR[1], cLO, cLOR()[0], cLOR()[1], mTL, mTLR()[0], mTLR()[1], cTL, cTLR()[0], cTLR()[1]);
-
     // 调用方法将值限制在指定的范围内
     cVsTRs();
     eD()
