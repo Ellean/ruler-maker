@@ -90,18 +90,69 @@ const updateRuler = throttle(({ target: { name: key, value } }) => {
 }, 200)
 
 fontSize.addEventListener("change", updateRuler)
+fontSize.addEventListener("input", (event) => {
+    navigator.vibrate(200)
+})
 fontColor.addEventListener("blur", updateRuler)
-mmTickColor.addEventListener("change", updateRuler)
-cmTickColor.addEventListener("change", updateRuler)
+
 mmTickLength.addEventListener("change", updateRuler)
+mmTickLength.addEventListener("input", (event) => {
+    navigator.vibrate(200)
+})
+mmTickColor.addEventListener("change", updateRuler)
+
 cmTickLength.addEventListener("change", updateRuler)
+cmTickLength.addEventListener("input", (event) => {
+    navigator.vibrate(200)
+})
+cmTickColor.addEventListener("change", updateRuler)
+
 cmLabelOffset.addEventListener("change", updateRuler)
+cmLabelOffset.addEventListener("input", (event) => {
+    navigator.vibrate(200)
+})
+
 startMargin.addEventListener("blur", updateRuler)
+startMargin.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        updateRuler(event)
+    }
+})
+
 endMargin.addEventListener("blur", updateRuler)
+endMargin.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        updateRuler(event)
+    }
+})
+
 startText.addEventListener("blur", updateRuler)
+startText.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        updateRuler(event)
+    }
+})
+
 endText.addEventListener("blur", updateRuler)
+endText.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        updateRuler(event)
+    }
+})
+
 length.addEventListener("blur", updateRuler)
+length.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        updateRuler(event)
+    }
+})
+
 width.addEventListener("blur", updateRuler)
+width.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+        updateRuler(event)
+    }
+})
 
 resetSVG.addEventListener("click", function () {
     localStorage.removeItem("rulerData");
