@@ -3,8 +3,6 @@ class Ruler {
 
   width = 20;
   length = 100;
-  svgWidth = 20;
-  svgLength = 130;
   mmTickLength = 10;
   cmTickLength = 20;
   cmLabelOffset = 15;
@@ -21,8 +19,7 @@ class Ruler {
 
   #numberKeys = [
     "width",
-    "height",
-    "svgHeight",
+    "length",
     "mmTickLength",
     "cmTickLength",
     "cmNumberLabelOffset",
@@ -43,15 +40,11 @@ class Ruler {
         }
       }
     });
-    this.svgLength = this.length + this.startMargin + this.endMargin + this.fontSize;
-    this.svgWidth = this.width + 20;
   }
 
   getSvgString() {
     const { width,
       length,
-      svgWidth,
-      svgLength,
       mmTickLength,
       cmTickLength,
       cmLabelOffset,
@@ -65,6 +58,9 @@ class Ruler {
       mmToPx,
     }
       = this;
+
+    const svgLength = this.length + this.startMargin + this.endMargin + this.fontSize;
+    const svgWidth = this.width + 20;
 
     // SVG header
     let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${mmToPx(svgWidth)}" height="${mmToPx(svgLength)}" viewBox="0 0 ${svgWidth} ${svgLength}">\n`;
