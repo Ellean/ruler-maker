@@ -198,8 +198,6 @@ class Ruler {
     } = this;
     const data = [fS, fSR()[0], fSR()[1], cLO, cLOR()[0], cLOR()[1], mTL, mTLR()[0], mTLR()[1], cTL, cTLR()[0], cTLR()[1]]
 
-    // console.log(data)
-
     rUL(...data)
   }
 
